@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse bg-dark" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="/"><img src="images/logositepng2.png" alt="" class="logo"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Acceuil</a></li>
+              <li><a href="tousProduits">Produits</a></li>
+              <li>
+<!--                 <form class="navbar-form navbar-left"> -->
+<!--                     <div class="form-group"> -->
+<!--                       <input type="text" class="form-control" placeholder="Recherche" id="search"> -->
+<!--                     </div> -->
+<!--                     <button type="submit" class="btn btn-warning" id="search_btn"><span class="glyphicon glyphicon-search"></span></button> -->
+<!--                  </form> -->
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>Votre Compte</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Panier</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+				<img class="imageP" th:src="${produitDetail.image}" >
+            </div>
+            <div class="col-md-7">
+                <p class="nouv text-center">nouveau</p>
+                <h2 th:text="${produitDetail.nom}"></h2>
+                <p th:text="${produitDetail.description}"></p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class="prix" th:text="${produitDetail.pubPrix()}" ></p>
+                <form action="/passerCommande">
+                   <label>Quantité</label>
+                
+<!--                 <input type="number" th:field="*{qte}" value="1"  > -->
+<!-- 				<a style="float:right;" class="btn btn-warning btn-xs" th:href="@{/passerCommande(id=${produitDetail.id})}">Ajouter au panier</a> -->
+                   <input type="submit" value="Ajouter au panier" style="width: 150px;border:none;" class="btn btn-warning">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

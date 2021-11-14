@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="style.css">
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse bg-dark" >
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="/">
+        <img src="images/logositepng2.png"  style="width:125px;transform :translateY(-10px);"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Acceuil</a></li>
+          <li><a href="/tousProduits">Produits</a></li>
+          <li>
+            <form class="navbar-form navbar-left">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Recherche" id="search">
+		        </div>
+		        <button type="submit" class="btn btn-primary" id="search_btn"style="background-color:#ffd739"><span class="glyphicon glyphicon-search"></span></button>
+		     </form>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        
+	<!--         <li> -->
+	<!--         <b th:if="${sessionExist!=null}"> -->
+	<!--         <a href="/seDeconnecter">Se déconnecter</a>         -->
+	<!--         </b> -->
+	
+	
+	        
+	<!--         </li> -->
+          <li><a href="/checkSession"><span class="glyphicon glyphicon-user"></span>Votre Compte</a></li>
+          <li><a href="/panier"><span class="glyphicon glyphicon-shopping-cart"></span>Panier</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-xs-12">
+            <div id="get_category">
+            </div>
+            <div class="nav nav-pills nav-stacked" >
+                <li class="active"><a href="#"style="background-color:black"><h4>Marque</h4></a></li>
+				<div  th:each="mr:${listeMarque}">
+                	<a href="#"><li th:text="${mr}"></a></li>
+				</div>
+            </div> 
+
+         </div>
+
+        <div class="col-md-8 col-xs-12">
+            <div class="panel panel-info">
+                <div class="panel-heading"style="background-color:black;color:white;">Produits</div>
+                <div class="panel-body">
+                    <div id="get_product">
+                    </div>
+                    
+                    
+             <div th:each="pr:${listPoduit}">
+                    <div class="col-md-4 product-a">
+                        <div class="panel panel-info">
+                            <div class="panel-heading"style="background-color:black;color:white;"><span th:text="${pr.nom}"></span></div>
+                            <div class="panel-body">
+                                <img class="imagePI" th:src="${pr.image}">
+                            </div>
+                            <div class="panel-heading"style="background-color:black;color:white;"> <b class="text-warning"><span th:text="${pr.prix}+ DT"></span></b> 
+                                <a style="float:right;" class="btn btn-warning btn-xs" th:href="@{voirDetail(id=${pr.id})}">Détails</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+              </div>      
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
+
+  <!---footer-->
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="footer-col-1">
+                  <h3>Developper Par:</h3>
+                  <p>Aymen Ben Abbes & Elyes Kacem</p>
+                  <div class="pic">
+                      <a href="https://www.fb.com/aymounovich" target="_blank"><img src="images/Aymen.jpg" alt=""></a>
+                      <a href="https://www.fb.com/elyes.kacem.50"><img src="images/Elyes.jpg" alt=""></a>
+                  </div>
+              </div>
+              <div class="footer-col-2">
+                  <img src="images/logositepng2.png" alt="">
+                  <p>Notre objectif est de satisfaire nos clients avec nos produits :Le client c'est el Roi 😂</p>
+              </div>
+              <div class="footer-col-3">
+                  <h3>Réseaux Sociaux</h3>
+                  <ul>
+                      <li>Facebook</li>
+                      <li>Instagram</li>
+                      <li>Twitter</li>
+                      <li>Youtube</li>
+                  </ul>
+              </div>
+              <div class="footer-col-4">
+                <h3>Notre adresse</h3>
+                <ul>
+                    <li>bizerte 7000</li>
+                    <li>Avenue Habib Bourguiba</li>
+                    <li>#Numero1: 51869906</li>
+                    <li>#Numero2: 95578050</li>
+                    <li>Vous étes bienvenue</li>
+                </ul>
+            </div>
+          </div>
+          <hr>
+          <p><center> Copyright 2020 © ShoppiNet - Tous Droits Reservés par Elyes & AYmen</center></p>
+      </div>
+  </footer>
+
+</body>
+</html>

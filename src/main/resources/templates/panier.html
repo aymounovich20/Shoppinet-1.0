@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse bg-dark" >
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="/">
+        <img src="images/logositepng2.png"  style="width:125px;transform :translateY(-10px);"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Acceuil</a></li>
+          <li><a href="/tousProduits">Produits</a></li>
+          <li>
+            <form class="navbar-form navbar-left">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Recherche" id="search">
+		        </div>
+		        <button type="submit" class="btn btn-primary" id="search_btn"style="background-color:#ffd739"><span class="glyphicon glyphicon-search"></span></button>
+		     </form>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        
+	<!--         <li> -->
+	<!--         <b th:if="${sessionExist!=null}"> -->
+	<!--         <a href="/seDeconnecter">Se déconnecter</a>         -->
+	<!--         </b> -->
+	
+	
+	        
+	<!--         </li> -->
+          <li><a href="/checkSession"><span class="glyphicon glyphicon-user"></span>Votre Compte</a></li>
+          <li><a href="/panier"><span class="glyphicon glyphicon-shopping-cart"></span>Panier</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="small-container panier">
+        <table>
+            <tr>
+                <th>produit</th>
+                <th>quantité</th>
+                <th>total</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="info-panier">
+                        <img src="default.jpg" alt="" style="width: 200px;" class="imgpan">
+                        <div>
+                            <p>machine a laver</p>
+                            <p>1200dt</p>
+                            <a href="">supprimer</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>1200dt</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="info-panier">
+                        <img src="default.jpg" alt="" style="width: 200px;"class="imgpan">
+                        <div>
+                            <p>machine a laver</p>
+                            <p>1200dt</p>
+                            <a href="">supprimer</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>1200dt</td>
+            </tr>
+        </table>
+        <hr class="ligne">
+        <button class="btn btn-warning btn">passer commande</button>
+    </div>
+    
+    <footer class=" text-center text-lg-start"style="background-color:black;">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase" style="color:white;">Footer Content</h5>
+      
+              <p class="text-light" style="color:white;">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                voluptatem veniam, est atque cumque eum delectus sint!
+              </p>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-white text-uppercase" style="color:white;">Links</h5>
+      
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-warning">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-warning">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-warning">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-warning">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+      
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-0 text-white" style="color:white;">Links</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!" class="text-warning">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-warning">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-warning">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-warning">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgb(68, 63, 63)">
+          © 2020 Copyright:
+          <a class="text-white" href="mailto:">isa2m.rnu.tn</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+</body>
+</html>

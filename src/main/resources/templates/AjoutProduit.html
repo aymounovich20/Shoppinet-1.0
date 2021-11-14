@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjoutProduit|Shoppinet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse bg-dark" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logositepng2.png" alt="" style="width:125px;transform :translateY(-10px);"></a>
+          </div>
+          
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+            
+<!--             <div th:if> -->
+            
+<!--             </div> -->
+            
+            
+            
+  
+             
+              
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/decoA"><span class="glyphicon glyphicon-user"></span>Se Déconnecter</a></li>
+             <!-- <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Panier</a></li>-->
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link " href="#"style="background-color:black;">
+                Tableau de bord 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="commande.html">
+                Les commandes 
+              </a>
+            </li>
+            <li class="nav-item bg-warning">
+              <a class="nav-link " href="/ListeProduits">
+                Les produits
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ListeClients">
+                Les Clients
+              </a>
+            </li>
+          </ul>
+         
+        </div>
+      </nav>
+  
+  
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-8 px-4">
+        	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+<!--           <h1 class="h2" >Bonjour <span th:text="${session.admin}"></span> </h1> -->
+        	</div>
+			
+			<div class="container"><div class=" text-center mt-5 ">
+        <h1>Ajouter un produit</h1>
+    </div>
+    <div class="row ">
+        <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+                <div class="card-body bg-light">
+                    <div class="container">
+                        <form id="product" action="/AjoutProduit" method="post">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="nom" >NOM</label> <input id="marque" type="text" name="nom" class="form-control" placeholder="entrer le nom de produit" required="required"> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="marque">MARQUE</label> <input id="marque" type="text" name="marque" class="form-control" placeholder="entrer la marque de produit" required="required"> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="prix">PRIX</label> <input id="prix" type="number" name="prix" class="form-control" placeholder="entrer le prix de produit" required="required"> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="image">IMAGE</label> <input id="image" type="text" name="image" class="form-control" placeholder="entrer /images/nomimage.ext" required="required"> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group"> <label for="description">DESCRIPTION</label> <textarea id="description" name="description" class="form-control" placeholder="entrer le description du produit" rows="4" required="required"></textarea> </div>
+                                    </div>
+                                    <div class="col-md-12"> <input type="submit" class="btn btn-warning btn-send pt-2 btn-block " value="Ajouter ce Produit"> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- /.8 -->
+        </div> <!-- /.row-->
+    </div>
+</div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+    <title>Login</title>
+
+    <style>
+
+.form-signin .form-control {
+  
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.far{
+    margin-top: 20px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.down{
+    margin-top: 60px;
+}
+.down2{
+    margin-top: 20px;
+}
+    </style>
+
+    
+</head>
+<body>
+
+    <div class="container down">
+      <h1 class="text-center">Login<br>Administrateur</h1>
+      <div class="container down">
+        <form action="/signA" class="form-signin" method="post">
+         
+          
+          
+          
+
+          <div class="form-group">
+            <label for="mail">Email Admin</label>
+            <input name="mail" type="email" class="form-control" id="mail" placeholder="Saisir votre Email admin"  >
+            <small id="emailHelp" class="form-text text-muted">Veuillez ne pas partager votre donnée.</small>
+          </div>
+          <div class="form-group">
+            <label for="mdp">Mot de passe</label>
+            <input name="mdp" type="password" class="form-control" id="mdp" placeholder="Saisir votre mot de passe" required >
+          </div>    
+          
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
+
+            <div class="down2">
+                
+                Vous n'avez pas un compte ? <a href="/formulaire">Créer un compte</a>
+            </div>
+
+            
+          
+                    
+            
+            
+            
+          <div th:if="${erreurLogA}"> 
+         
+          
+          
+            <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Attention!</strong>  <a th:text="${erreurLogA}"></a>
+  </div>
+          
+          </div>
+            
+            
+            
+            
+        </form>
+        
+    </div>
+    <a href="/loginClient" >Je suis un Client</a>
+</div>
+
+</body>
+</html>

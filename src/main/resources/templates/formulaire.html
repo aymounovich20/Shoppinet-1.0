@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+    <title>formulaire</title>
+
+    <style>
+
+.form-signin .form-control {
+  
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.down{
+    margin-top: 40px;
+}
+.far{
+    margin-top: 30px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.down2{
+    margin-top: 30px;
+}
+    </style>
+
+</head>
+<body>
+ 
+    <div class="container down">
+      <h1 class="text-center">Formulaire</h1>
+      <div class="container">
+        <form action="/register" class="form-signin" method="post">
+         
+          
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input required name="nom" type="text" class="form-control" id="nom"  placeholder="Nom"  autofocus >
+            
+          </div>
+
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input required name="prenom" type="text" class="form-control" id="prenom" placeholder="Prénom"  >
+          </div>
+          
+
+          <div class="form-group">
+            <label for="mail">Votre mail</label>
+            <input required name="mail" type="email" class="form-control" id="mail" placeholder="Enter email"  >
+            <small id="emailHelp" class="form-text text-muted">Nous ne partagons pas votre mail.</small>
+          </div>
+          
+          <div class="form-group">
+            <label for="mdp">Mot de passe</label>
+            <input required name="mdp" type="password" class="form-control" id="mdp" placeholder="Password"  >
+          </div>
+          
+          
+           <div class="form-group">
+            <label for="verifmdp">Votre adresse</label>
+            <input required name="adresse" type="text" class="form-control" id="adresse" placeholder="Votre adresse"  >
+          </div>
+          
+           <div class="form-group">
+            <label for="verifmdp">Votre ville</label>
+            <input required name="ville" type="text" class="form-control" id="ville" placeholder="Saisir votre ville"  >
+          </div>
+          
+           <div class="form-group">
+            <label for="verifmdp">Votre numéro de téléphone</label>
+            <input required name="numTel" type="text" class="form-control" id="numTel" placeholder="Saisir votre numéro"  >
+          </div>
+          
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Enregistrer</button>
+          <div class="down2">
+            Vous avez déja un compte? <a href="/loginClient">Se connecter</a>
+          </div>
+          
+                          
+        </form>
+        
+      </div>
+    </div>
+    <br><br>
+</body>
+</html>

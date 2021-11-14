@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse bg-dark" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#"><img src="logositepng2.png" alt="" class="logo"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Acceuil</a></li>
+              <li><a href="#">Produits</a></li>
+              <li>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Recherche" id="search">
+                    </div>
+                    <button type="submit" class="btn btn-warning" id="search_btn"><span class="glyphicon glyphicon-search"></span></button>
+                 </form>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" class="active"><span class="glyphicon glyphicon-user"></span>Mon Compte</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Panier</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <form action="">
+        <div class="profile">
+            <img src="icon.png" alt="" class="icon">
+            <ul>
+                    <li>Nom : </li>
+                    <input type="text" name="" class="" th:value="${user.nom}">
+                    <li>Prénom :</li> 
+                    <input type="text" name="" th:value="${user.prenom}">
+                    <li>E-mail :</li>
+                    <input type="text" name="" th:value="${user.mail}">
+                    <li>numero</li>
+                    <input type="text" name="" th:value="${user.numTel}">
+            </ul>
+            <button>mise a jour</button>
+       
+        </div>
+    </form>
+
+
+    
+</body>
+</html>
